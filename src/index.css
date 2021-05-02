@@ -1,13 +1,96 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+Variables
+ */
+:root {
+  --primaryColor: #650d1b;
+  --secondaryColor: #f3b700;
+  --background: #eef0f2;
+  --mainBlack: #111111;
+  --mainWhite: #ffffff;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.1rem;
+  --navbarShadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --mainBorderRadius: 0.59rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --max-width: 1170px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: var(--background);
+  color: var(--mainBlack);
+  line-height: 1.4;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+h1,
+h2 {
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+h3,
+h4 {
+  font-family: "Nunito", sans-serif;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: var(--mainWhite);
+}
+/*  NavBar styling*/
+.nav-container {
+  background: var(--primaryColor);
+  height: 5rem;
+  box-shadow: var(--navbarShadow);
+  display: flex;
+}
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--smallWidth);
+  max-width: var(--max-width);
+}
+.nav-logo {
+  display: flex;
+}
+.nav-logo > h2 {
+  font-size: 2rem;
+  margin: 2rem;
+  padding: 3rem;
+  font-weight: 600;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links a {
+  display: flex;
+  text-transform: capitalize;
+  margin-right: 2rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  transition: var(--mainTransition);
+}
+.nav-links a:hover {
+  color: var(--secondaryColor);
+  border-bottom: 8px solid var(--secondaryColor);
 }
