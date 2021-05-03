@@ -1,19 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { BsFillMicMuteFill } from "react-icons/bs";
 
 function NavBar() {
   return (
     <nav className="nav-container">
       <div className="nav-content">
-        <Link className="nav-logo" to="/">
-          <h2>Lip/sync</h2>
-        </Link>
+        <div className="logo-container">
+          <Link to="/" className="logo-text">
+            <h2>
+              Lip.Sync
+              <span className="logo-icon">
+                <BsFillMicMuteFill />
+              </span>
+            </h2>
+          </Link>
+        </div>
+
         <ul className="nav-links">
           <Link to="/">
             <li>Home</li>
-          </Link>
-          <Link to="/about">
-            <li>About</li>
           </Link>
         </ul>
       </div>

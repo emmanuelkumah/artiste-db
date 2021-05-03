@@ -68,14 +68,13 @@ a {
   width: var(--smallWidth);
   max-width: var(--max-width);
 }
-.nav-logo {
+.logo-container {
   display: flex;
 }
-.nav-logo > h2 {
-  font-size: 2rem;
-  margin: 2rem;
-  padding: 3rem;
-  font-weight: 600;
+
+.logo-icon {
+  color: var(--secondaryColor);
+  font-size: 1.1rem;
 }
 .nav-links {
   display: flex;
@@ -84,13 +83,42 @@ a {
 .nav-links a {
   display: flex;
   text-transform: capitalize;
-  margin-right: 2rem;
   font-weight: 400;
   font-size: 1.2rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1.5rem;
   transition: var(--mainTransition);
 }
 .nav-links a:hover {
   color: var(--secondaryColor);
-  border-bottom: 8px solid var(--secondaryColor);
+  border-bottom: 3px solid var(--secondaryColor);
+}
+
+/* 
+=====
+Media Query
+========
+ */
+/* Media query for phone view */
+@media screen and (min-width: 320px) {
+  .logo-container {
+    margin-left: 1.5rem;
+  }
+  .logo-text {
+    position: relative;
+    top: 0.7rem;
+  }
+  .logo-icon {
+    float: right;
+    position: absolute;
+    bottom: 1.5rem;
+  }
+}
+/* Media query for tablet view */
+@media screen and (min-width: 768px) {
+}
+/* Media query for desktop */
+@media screen and (min-width: 980px) {
+  .logo-container {
+    margin-left: 5rem;
+  }
 }
