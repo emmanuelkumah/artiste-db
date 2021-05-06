@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
+import "./Loading.css";
 
 function Loading() {
   return (
-    <div>
-      <h2>This is the loading screen</h2>
-    </div>
+    <section>
+      <h2 className="spinner-heading">Loading...</h2>
+      <div class="loadingio-spinner-spinner-auntxe7xkk">
+        <div class="ldio-ctqchxxgpvg">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </section>
   );
 }
 
