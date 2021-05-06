@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { AppProvider } from "../../context/context";
+import { AppContext } from "../../context/context";
 
 function SearchForm() {
-  const result = useContext(AppProvider);
+  const result = useContext(AppContext);
   console.log(result);
   return (
     <div>
