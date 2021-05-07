@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/context";
 import Loading from "../Loading/Loading";
+import SingleArtiste from "./SingleArtiste";
 
 function ArtisteList() {
   const { loading, data } = useContext(AppContext);
@@ -13,13 +14,18 @@ function ArtisteList() {
   //display message if data was not fetched
   if (data.length < 1) {
     return (
-      <h2 className="section-title">Sorry, no cocktail matched your search </h2>
+      <h2 className="section-title">Sorry, no artiste matched your search </h2>
     );
   }
   return (
-    <div>
-      <h2>This is the artiste list</h2>
-    </div>
+    <section>
+      <h2>Featured Artist</h2>
+      <div>
+        {data.map((item) => {
+          return <SingleArtiste key={item.id} {...item} />;
+        })}
+      </div>
+    </section>
   );
 }
 

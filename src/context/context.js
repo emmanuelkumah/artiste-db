@@ -3,56 +3,69 @@ import axios from "axios";
 
 //create the context
 const AppContext = React.createContext();
-//api url
 
 //create a context component
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [query, setQuery] = useState("coldpay");
+  const [query, setQuery] = useState("");
   const [url, setUrl] = useState(
-    "https://www.theaudiodb.com/api/v1/json/1/search.php?s=coldplay"
+    "https://www.theaudiodb.com/api/v1/json/1/search.php?s=jay-z"
   );
   const [data, setData] = useState([]);
 
   //fetch Data from DB
   const fetchData = async () => {
     setLoading(true);
+    //fetch data base on url
     const result = await axios(url);
     const { artists } = result.data;
-    // console.log("the required data is", artists);
 
-    // setData(result.data.artists);
-    // setLoading(false);
     if (artists) {
       setLoading(false);
       const requiredData = artists.map((artist) => {
-        //extract the required data
+        //extract the required data from the object
         const {
           idArtist,
           strArtist,
           strLabel,
           intBornYear,
           strStyle,
+          strGenre,
+          strCountry,
+          strArtistThumb,
           strArtistWideThumb,
           strArtistFanart,
           strArtistLogo,
+          strBiographyEN,
+          strWebsite,
+          strFacebook,
+          strTwitter,
         } = artist;
-        //rename the extracted values
+        //rename the extracted values to a user-friendly one
         return {
           id: idArtist,
           name: strArtist,
           label: strLabel,
           year: intBornYear,
+          country: strCountry,
           image: strArtistWideThumb,
           image2: strArtistFanart,
+          image3: strArtistThumb,
           logo: strArtistLogo,
           style: strStyle,
+          genre: strGenre,
+          bio: strBiographyEN,
+          Facebook: strFacebook,
+          Twitter: strTwitter,
+          Website: strWebsite,
         };
       });
       setLoading(false);
-      //update the data
+      //update the data state
       setData(requiredData);
     } else {
+      setData([]);
+      setLoading(false);
     }
   };
   //fetch data when url value changes

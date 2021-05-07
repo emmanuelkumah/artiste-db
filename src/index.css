@@ -240,6 +240,68 @@ a {
   );
 }
 
+/* Single Artiste Styling */
+.artiste-container {
+  background-color: #faaca8;
+  background-image: linear-gradient(19deg, #faaca8 0%, #ddd6f3 100%);
+  height: 100vh;
+  padding-top: 3rem;
+}
+.artiste-row {
+  display: flex;
+  flex-direction: row;
+}
+.artiste-img-wrapper {
+  width: 40%;
+  /* border: 1px solid blue; */
+  margin: 2rem;
+}
+.artiste-img {
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
+  /* padding: 2rem; */
+  /* margin: 2rem; */
+}
+.artiste-info-container {
+  margin-top: 2rem;
+  width: 60%;
+}
+.artiste-name {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.artiste-brief > span {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-left: 5px solid #650d1b;
+  font-size: 1.3rem;
+}
+.artiste-biography {
+  margin-top: 2rem;
+}
+.artiste-biography > p {
+  padding-top: 1rem;
+  padding-right: 4rem;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Change this line if you want. In this case it trimmed the text to 3 lines. */
+  overflow: hidden;
+}
+.artiste-socials {
+  margin-top: 3rem;
+}
+.social-icons {
+  margin-right: 2rem;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 2rem;
+  background: #650d1b;
+}
+/* End of Single Artiste Styling */
 /* 
 =====
 Media Query
