@@ -176,6 +176,70 @@ a {
   color: var(--mainWhite);
   transition: var(--mainTransition);
 }
+
+/* 
+====Styling for Search Section===
+ */
+.search {
+  margin-top: 4rem;
+}
+.search-form {
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--maxWidth);
+  background: var(--mainWhite);
+  padding: 2rem 2.5rem;
+  text-transform: capitalize;
+  border-radius: var(--mainBorderRadius);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  border: 5px solid var(--secondaryColor);
+}
+
+.search-form-control label {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+  color: var(--primaryColor);
+}
+.search-form-control input {
+  width: 70%;
+  outline: none;
+  border: 1px solid var(--primaryColor);
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(255, 221, 225, 1) 11.2%,
+    rgba(255, 255, 255, 1) 92.2%
+  );
+  border-radius: var(--mainBorderRadius);
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  color: var(--mainBlack);
+}
+.search-btn {
+  background-image: radial-gradient(
+    circle 597px at 93% 9.8%,
+    rgba(255, 61, 89, 1) 1.7%,
+    rgba(252, 251, 44, 1) 97%
+  );
+  border: none;
+  border-radius: 10px;
+  color: var(--mainWhite);
+  font-size: 1rem;
+  margin-left: 20px;
+  padding: 15px;
+}
+.search-btn:hover,
+:focus {
+  background-image: linear-gradient(
+    178.2deg,
+    rgba(118, 8, 23, 1) 10.9%,
+    rgba(158, 12, 33, 1) 62.6%
+  );
+}
+
 /* 
 =====
 Media Query
