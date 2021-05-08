@@ -1,12 +1,14 @@
 import React from "react";
-import { RiFacebookLine, RiTwitterLine } from "react-icons/ri";
+import { RiFacebookLine, RiProfileLine, RiTwitterLine } from "react-icons/ri";
+import { GiShadowFollower } from "react-icons/gi";
 import { CgWebsite } from "react-icons/cg";
 // import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function SingleArtiste({
   name,
   label,
-  year,
+  born,
+  formed,
   country,
   image,
   image2,
@@ -27,17 +29,33 @@ function SingleArtiste({
         </div>
         <div className="artiste-info-container">
           <h2 className="artiste-name">{name}</h2>
+          <div className="artiste-year">
+            <span>Born:{born}</span>
+            <span>Formed:{formed}</span>
+          </div>
+
           <div className="artiste-brief">
             <span>Country:{country}</span>
             <span>label:{label}</span>
             <span>Genre:{genre}</span>
           </div>
           <div className="artiste-biography">
-            <h3>Biography</h3>
+            <h3>
+              <span className="artiste-icon">
+                <RiProfileLine />
+              </span>
+              Biography
+            </h3>
+
             <p className="line-clamp">{bio}</p>
           </div>
           <div>
-            <h3>Connect with {name}</h3>
+            <h3>
+              <span className="artiste-icon">
+                <GiShadowFollower />
+              </span>
+              Connect
+            </h3>
             <div className="artiste-socials">
               <a
                 href={Website}
