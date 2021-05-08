@@ -258,7 +258,10 @@ a {
 }
 .artiste-container {
   background-image: url(https://source.unsplash.com/aWXVxy8BSzc);
-  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   padding-top: 3rem;
 }
 .artiste-info-container {
@@ -310,13 +313,13 @@ a {
 }
 .artiste-biography > p {
   padding-top: 1rem;
-  padding-right: 4rem;
+  /* padding-right: 4rem; */
   font-weight: 600;
 }
 .line-clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5; /* Change this line if you want. In this case it trimmed the text to 3 lines. */
+  -webkit-line-clamp: 5;
   overflow: hidden;
 }
 .artiste-socials {
@@ -391,7 +394,45 @@ Media Query
     width: 100%;
     font-size: 1rem;
   }
+  .search-form-control input {
+    width: 100%;
+  }
+
+  button.search-btn {
+    margin-top: 2rem;
+    margin-left: 0rem;
+  }
+  /* Artiste list */
+
+  .artiste-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .artiste-info-container {
+    padding-right: 2rem;
+  }
+  .artiste-year {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .artiste-img-wrapper {
+    margin: 2rem auto;
+    width: var(--smallWidth);
+  }
+  .artiste-img {
+    display: inline-block;
+  }
+  .artiste-info-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .artiste-socials {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
 }
+
 /* Media query for tablet view */
 @media screen and (min-width: 768px) {
   .logo-container {
