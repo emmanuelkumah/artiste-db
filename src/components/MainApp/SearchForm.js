@@ -17,7 +17,7 @@ function SearchForm() {
     <section className="search">
       <form className="search-form">
         <div className="search-form-control">
-          <label htmlFor="name">Search For your artiste</label>
+          <label htmlFor="name">Unveil Your Favourite Artiste</label>
           <input
             autoFocus
             type="text"

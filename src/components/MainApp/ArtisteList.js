@@ -7,15 +7,15 @@ import { GiMicrophone } from "react-icons/gi";
 function ArtisteList() {
   const { loading, data } = useContext(AppContext);
 
-  console.log("the fetched data is", data);
-
   if (loading) {
     return <Loading />;
   }
   //display message if data was not fetched
   if (data.length < 1) {
     return (
-      <h2 className="section-title">Sorry, no artiste matched your search </h2>
+      <h2 className="section-title">
+        Sorry friend, no artiste matched your search, please try again!
+      </h2>
     );
   }
   return (

@@ -1,8 +1,14 @@
 import React from "react";
 import { RiFacebookLine, RiProfileLine, RiTwitterLine } from "react-icons/ri";
-import { GiShadowFollower } from "react-icons/gi";
+import { AiFillFormatPainter } from "react-icons/ai";
+import {
+  GiShadowFollower,
+  GiModernCity,
+  GiMusicSpell,
+  GiMusicalNotes,
+  GiNewBorn,
+} from "react-icons/gi";
 import { CgWebsite } from "react-icons/cg";
-// import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function SingleArtiste({
   name,
@@ -25,19 +31,27 @@ function SingleArtiste({
     <section className="artiste-container">
       <article className="artiste-row">
         <div className="artiste-img-wrapper">
-          <img src={image3} alt={name} className="artiste-img" width="300px" />
+          <img src={image3} alt={name} className="artiste-img" />
         </div>
         <div className="artiste-info-container">
           <h2 className="artiste-name">{name}</h2>
-          <div className="artiste-year">
-            <span>Born:{born}</span>
-            <span>Formed:{formed}</span>
-          </div>
 
-          <div className="artiste-brief">
-            <span>Country:{country}</span>
+          <div className="artiste-details">
+            <p>
+              <GiModernCity className="a-b-icon" />
+              Country: {country}
+            </p>
+            <p>
+              <GiMusicSpell className="a-b-icon" />
+              Label: {label}
+            </p>
+            <p>
+              <GiMusicalNotes className="a-b-icon" />
+              Genre: {genre}
+            </p>
+            {/* <span>Country:{country}</span>
             <span>label:{label}</span>
-            <span>Genre:{genre}</span>
+            <span>Genre:{genre}</span> */}
           </div>
           <div className="artiste-biography">
             <h3>

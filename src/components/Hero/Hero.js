@@ -19,12 +19,12 @@ function Hero() {
               </div>
               <div className="sub-heading">
                 <h3>
-                  Find out everthing you need to know about your favorite
-                  artiste or band.
+                  Easilty Find out everthing you need to know about your
+                  favorite artiste or band.
                 </h3>
               </div>
               <Link to="/main-app">
-                <button className="btn-cta">Get started</button>
+                <button className="btn-cta">Get Started</button>
               </Link>
             </div>
           </div>
